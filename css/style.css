@@ -1,0 +1,69 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 140px 170px 1fr;
+  grid-template-areas: ". h ." ". m ." ". n .";
+}
+.container .header {
+  grid-area: h;
+  border: 1px solid black;
+  text-align: center;
+}
+.container .main {
+  grid-area: m;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  text-align: center;
+}
+.container .main .input-box {
+  text-align: center;
+  padding-top: 2%;
+}
+.container .main .input-box .inputField {
+  width: 90%;
+  height: 75%;
+}
+.container .main .inputButton {
+  width: 100px;
+  height: 40px;
+}
+.container .notes {
+  grid-area: n;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .notes .notes__note-box {
+  border: 1px solid black;
+  width: 28vw;
+  margin-top: 7px;
+  padding: 5px;
+  text-align: center;
+}
+.container .notes .notes__note-box .notes__preview {
+  margin-bottom: 15px;
+}
+.container .notes__tooltip {
+  visibility: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(140, 140, 140, 0.7);
+  z-index: 1;
+}
+.container .notes__tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  background-color: white;
+  outline: 2px solid black;
+  max-width: 400px;
+  padding: 1%;
+  z-index: 50;
+}
+.container .notes__tooltip-text .notes__x-button {
+  margin-bottom: 1.5%;
+}
